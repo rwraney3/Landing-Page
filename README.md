@@ -17,4 +17,4 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 ## Credits
 
-Many thanks to [Alan Gumer](https://github.com/alangumer) (my nephew) for helping me work some of my bugs.
+Many thanks to [Alan Gumer](https://github.com/alangumer) (my nephew) for helping me work through some of my bugs.
