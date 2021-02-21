@@ -5,7 +5,7 @@ This is project 2 in [Udacity Front End Web Developer](https://www.udacity.com/c
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Thank you to Alan Gumar for his help](github.alangumar)
+* [Thank you to Alan Gumar for his help](github.com/alangumar)
 
 ## Instructions
 
