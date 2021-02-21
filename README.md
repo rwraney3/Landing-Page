@@ -1,8 +1,11 @@
 # Landing Page Project
 
+This is project 2 in [Udacity Front End Web Developer](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) nanodegree.
+
 ## Table of Contents
 
 * [Instructions](#instructions)
+* [Thank you to Alan Gumar for his help](github.alangumar)
 
 ## Instructions
 
