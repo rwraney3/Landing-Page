@@ -28,16 +28,33 @@ function buildNav() {
         link.innerHTML=section.getAttribute("data-nav");
         link.setAttribute('data-id', section.getAttribute("id"));
         link.addEventListener('click', function(event){
-            event.stopPropagation();
+            event.preventDefault();
             animate(event.target);
         });
         element.appendChild(link);
         ul.appendChild(element);
     }
 }
+
+// setting active class
+//loop over the sections
+for (section of sections){
+    DOMRect = section.getboundingclientrect() {
+        if (DOMRect => 200) and (DomRect <= -200)
+            section.
+    }
+}
+
+//calculate the position of each section using the getboundingclientrect function
+//compare that position with a value like 200 and -200
+//if the section position is between these values then we need to add a class that represents the active sections like (adding the class your-active-class to the active section)
+//if not then we need to remove the class from the section.
+
+//
+
 // scroll to proper location
 function animate(element) {
-    var rect = document.getElementById(element.getAttribute('data-id')).scrollIntoView({
+    let rect = document.getElementById(element.getAttribute('data-id')).scrollIntoView({
         behavior: 'smooth'
     });
 }
