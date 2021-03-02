@@ -71,10 +71,10 @@ section {
 }
 
 .navbar__menu li {
-    color: white;
+    color: black;
     display: inline-block;
     padding: 5px;
-    background-color: rgb(0 13 60);
+    background-color: white;
     cursor: pointer;
     transition: all;
     
@@ -102,14 +102,14 @@ section {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(0 13 60);
+    background-color: white;
     border-bottom: solid 5px white;
     z-index: 5;
 }
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
+    background-color: #000;
     padding: 3em;
     color: #fff;
 }

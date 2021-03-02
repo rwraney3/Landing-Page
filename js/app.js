@@ -37,13 +37,19 @@ function buildNav() {
 }
 
 // setting active class
-//loop over the sections
-for (section of sections){
-    DOMRect = section.getboundingclientrect() {
-        if (DOMRect => 200) and (DomRect <= -200)
-            section.
-    }
-}
+// //loop over the sections
+
+// function setActive() {
+//     let position = section.getboundingclientrect();
+//     for (section of sections){
+//     section.addEventListener('click', function(event){
+//         event.preventDefault();
+//         if (position.top < 200 && position.top > -200) {
+//             section.class = "my-active-class";
+//     } else remove
+// }}
+
+
 
 //calculate the position of each section using the getboundingclientrect function
 //compare that position with a value like 200 and -200
@@ -59,4 +65,3 @@ function animate(element) {
     });
 }
 buildNav();
-
