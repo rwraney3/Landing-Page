@@ -15,7 +15,17 @@
 
 // Define Global Variables
 
-let sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
+
+
+// End Global Variables
+
+// Start Helper Functions
+    // to get top position of section
+
+// End Helper Functions
+
+// Begin Main Functions
 
 // build the nav
 
@@ -24,39 +34,38 @@ function buildNav() {
     for (section of sections) { 
         let element = document.createElement("li");
         let link = document.createElement("a");
-        // link.href='#'+section.getAttribute('id');
         link.innerHTML=section.getAttribute("data-nav");
         link.setAttribute('data-id', section.getAttribute("id"));
         link.addEventListener('click', function(event){
-            event.preventDefault();
+            event.preventDefault(); 
             animate(event.target);
         });
         element.appendChild(link);
         ul.appendChild(element);
     }
 }
-
 // setting active class
-// //loop over the sections
+// first, we need to loop over the sections
+function selectSection() {
+    for (section of sections) {
+        let rect = section.getBoundingClientRect();
+        let navItem = document.querySelector('#navbar__list li a[data-id='+ section.getAttribute('id')+']')
+        //calculate the position of each section using the getboundingclientrect function
 
-// function setActive() {
-//     let position = section.getboundingclientrect();
-//     for (section of sections){
-//     section.addEventListener('click', function(event){
-//         event.preventDefault();
-//         if (position.top < 200 && position.top > -200) {
-//             section.class = "my-active-class";
-//     } else remove
-// }}
-
-
-
-//calculate the position of each section using the getboundingclientrect function
-//compare that position with a value like 200 and -200
-//if the section position is between these values then we need to add a class that represents the active sections like (adding the class your-active-class to the active section)
-//if not then we need to remove the class from the section.
-
-//
+        //then we need to compare that position with a value like 200 and -200
+        // console.log("top:" + rect.top, "bottom:" + rect.bottom, "window:" +window.scrollY)
+        if(rect.top <= 200 && rect.top >= -200){
+            //if true - add a class your-active-class to the active section
+            section.classList.add("your-active-class");
+            navItem.classList.add("active");
+        }
+            else {
+            //if not then we need to remove the class your-active-class from the section
+            section.classList.remove("your-active-class");
+            navItem.classList.remove('active');
+        }
+    }
+}
 
 // scroll to proper location
 function animate(element) {
@@ -65,3 +74,7 @@ function animate(element) {
     });
 }
 buildNav();
+window.addEventListener('scroll', function(event){
+    selectSection();
+    
+});
